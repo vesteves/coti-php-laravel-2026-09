@@ -31,15 +31,17 @@ class QuartoController extends Controller
 
         return view('quartos',
             [
-                "quartos" => $quartos
+                "quartos" => $quartos,
             ]
         );
     }
 
     public function show(int $id)
     {
+        // Model
         $quarto =
             [
+                'id' => 1,
                 'nome' => 'Quarto 1',
                 'tipo' => 'Solteiro',
                 'valorDiaria' => 380,
