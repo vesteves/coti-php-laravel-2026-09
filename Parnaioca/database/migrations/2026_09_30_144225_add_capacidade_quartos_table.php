@@ -11,15 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('quartos', function (Blueprint $table) {
-            $table->id();
-
-            $table->string('nome');
-            $table->string('tipo');
-            $table->integer('valorDiaria');
-            $table->boolean('disponivel');
-
-            $table->timestamps();
+        Schema::table('quartos', function (Blueprint $table) {
+            $table->integer('capacidade')->default(1);
         });
     }
 
@@ -28,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('quartos');
+        Schema::table('quartos', function (Blueprint $table) {
+            $table->dropColumn(['capacidade']);
+        });
     }
 };

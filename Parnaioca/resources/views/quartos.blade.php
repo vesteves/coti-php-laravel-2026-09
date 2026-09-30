@@ -11,6 +11,8 @@
 
             <p>R$ {{ $quarto['valorDiaria'] }}</p>
 
+            <p>Capacidade: {{ $quarto['capacidade'] }}</p>
+
             <!-- <p>{{ $quarto['disponivel'] }}</p> -->
 
             <!-- @if ($quarto['disponivel'])
