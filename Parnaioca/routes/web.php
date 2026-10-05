@@ -47,9 +47,25 @@ Route::get('/vitor', function () {
 Route::get('/quartos', [
     QuartoController::class,
     'index'
+])->name('quartos.list');
+
+Route::get('/quartos/create', [
+    QuartoController::class,
+    'create'
+]);
+
+Route::post('/quartos', [
+    QuartoController::class,
+    'store'
 ]);
 
 Route::get('/quartos/{id}', [
     QuartoController::class,
     'show'
 ]);
+
+// put - atualizar
+
+// patch - atualizar uma única informação do meu dado
+
+// delete - remover

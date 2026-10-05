@@ -6,12 +6,12 @@
         <h1>Quartos</h1>
 
         @foreach ($quartos as $quarto)
-            <h2>{{ $quarto['nome'] }}</h2>
-            <p>{{ $quarto['tipo'] }}</p>
+            <h2>{{ $quarto->nome }}</h2>
+            <p>{{ $quarto->tipo }}</p>
 
-            <p>R$ {{ $quarto['valorDiaria'] }}</p>
+            <p>R$ {{ $quarto->valorDiaria }}</p>
 
-            <p>Capacidade: {{ $quarto['capacidade'] }}</p>
+            <p>Capacidade: {{ $quarto->capacidade }}</p>
 
             <!-- <p>{{ $quarto['disponivel'] }}</p> -->
 
@@ -21,7 +21,7 @@
                 <p>Indisponível</p>
             @endif -->
 
-            <p>{{ $quarto['disponivel'] ? 'Disponível' : 'Indisponível' }}</p>
+            <p>{{ $quarto->disponivel ? 'Disponível' : 'Indisponível' }}</p>
         @endforeach
 
         <!-- <pre>
