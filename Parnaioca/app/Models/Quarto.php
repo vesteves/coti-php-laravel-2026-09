@@ -18,5 +18,10 @@ use Illuminate\Database\Eloquent\Attributes\Fillable;
 ])]
 class Quarto extends Model
 {
-    //
+    // protected $fillable = [
+    //     'nome',
+    //     'tipo',
+    //     'valorDiaria',
+    //     'disponivel'
+    // ];
 }

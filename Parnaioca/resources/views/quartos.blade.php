@@ -7,6 +7,8 @@
 
         @foreach ($quartos as $quarto)
             <h2>{{ $quarto->nome }}</h2>
+
+            <p>{{ $quarto->id }}</p>
             <p>{{ $quarto->tipo }}</p>
 
             <p>R$ {{ $quarto->valorDiaria }}</p>
